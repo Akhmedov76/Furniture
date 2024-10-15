@@ -1,0 +1,161 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-10-15 21:48+0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || "
+"(n%100>=11 && n%100<=14)? 2 : 3);\n"
+
+#: .\templates\contact.html:21 .\templates\home.html:5
+#: .\templates\layouts\header_base.html:99 .\templates\user-account.html:18
+msgid "Home"
+msgstr "Главная"
+
+#: .\templates\contact.html:26
+msgid "Contact"
+msgstr "Контакт"
+
+#: .\templates\contact.html:36 .\templates\layouts\header_base.html:122
+msgid "Contact Us"
+msgstr "Электронная почта"
+
+#: .\templates\contact.html:48
+msgid "Email"
+msgstr ""
+
+#: .\templates\contact.html:65 .\templates\user-account.html:47
+msgid "Address"
+msgstr "Адрес"
+
+#: .\templates\contact.html:81
+msgid "Hotline"
+msgstr "Горячая линия"
+
+#: .\templates\home.html:2482
+msgid ""
+"Sign up to our newsletter to get the latest articles, lookbooks voucher "
+"codesdirect to your inbox"
+msgstr ""
+"Подпишитесь на нашу рассылку, чтобы получать последние статьи, купоны на "
+"лукбуки прямо на ваш почтовый ящик"
+
+#: .\templates\home.html:2489
+msgid "Enter Your Email"
+msgstr "Введите свой адрес электронной почты"
+
+#: .\templates\home.html:2493
+msgid "subscribe"
+msgstr "подписаться"
+
+#: .\templates\layouts\header_base.html:105
+msgid "Blog"
+msgstr "Блог"
+
+#: .\templates\layouts\header_base.html:111
+msgid "Page"
+msgstr "Страница"
+
+#: .\templates\layouts\header_base.html:136
+#: .\templates\layouts\header_base.html:146 .\templates\user-account.html:23
+#: .\templates\user-account.html:34
+msgid "My Account"
+msgstr "Мой счет"
+
+#: .\templates\layouts\header_base.html:153
+msgid "Sign in"
+msgstr "Войти"
+
+#: .\templates\layouts\header_base.html:160
+#, fuzzy
+#| msgid "My Account"
+msgid "Register Account"
+msgstr "Мой счет"
+
+#: .\templates\layouts\header_base.html:166
+msgid "Checkout"
+msgstr "Проверить"
+
+#: .\templates\layouts\header_base.html:173
+msgid "My Wishlists"
+msgstr "Мои списки желаний"
+
+#: .\templates\layouts\header_base.html:292
+msgid "FREE DELIVERY From $ 250"
+msgstr "БЕСПЛАТНАЯ ДОСТАВКА от $250"
+
+#: .\templates\layouts\header_base.html:304
+msgid "MONEY BACK"
+msgstr "ВОЗВРАТ ДЕНЕГ"
+
+#: .\templates\layouts\header_base.html:305
+msgid "GUARANTEED"
+msgstr "ГАРАНТИРОВАННО"
+
+#: .\templates\layouts\header_base.html:319
+msgid "Search"
+msgstr "Поиск"
+
+#: .\templates\user-account.html:39
+msgid "My Name"
+msgstr "Имя"
+
+#: .\templates\user-account.html:43
+msgid "Company"
+msgstr "Компания"
+
+#: .\templates\user-account.html:51
+msgid "City"
+msgstr "Город"
+
+#: .\templates\user-account.html:55
+msgid "Postal/Zip Code"
+msgstr "Почтовый индекс"
+
+#: .\templates\user-account.html:59
+msgid "Phone"
+msgstr "Телефон"
+
+#: .\templates\user-account.html:63
+msgid "Country"
+msgstr "Страна"
+
+#: .\templates\user-account.html:71
+msgid "view Address"
+msgstr "Посмотреть адрес"
+
+#: .\templates\user-account.html:74
+msgid "Order"
+msgstr "Заказ"
+
+#: .\templates\user-account.html:75
+msgid "History"
+msgstr "История"
+
+#: .\templates\user-account.html:77
+msgid "You haven not placed any orders yet."
+msgstr "Вы еще не разместили ни одного заказа."
+
+#: .\templates\user-register.html:41 .\templates\user-register.html:81
+#, fuzzy
+#| msgid "My Account"
+msgid "Create Account"
+msgstr "Мой счет"
+
+#, fuzzy
+#~| msgid "Contact Us"
+#~ msgid "Contact US"
+#~ msgstr "Электронная почта"
