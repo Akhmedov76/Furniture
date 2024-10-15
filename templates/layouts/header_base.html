@@ -140,21 +140,21 @@
                         <div id="acount" class="collapse">
                             <div class="account-list-content">
                                 <div>
-                                    <a class="login" href="{% url 'users:user_account' %}" rel="nofollow"
+                                    <a class="login" href="{% url 'users:account' %}" rel="nofollow"
                                        title="Log in to your customer account">
                                         <i class="fa fa-cog"></i>
                                         <span>{% trans 'My Account' %}</span>
                                     </a>
                                 </div>
                                 <div>
-                                    <a class="login" href="{% url 'users:user_login' %}" rel="nofollow"
+                                    <a class="login" href="{% url 'users:login' %}" rel="nofollow"
                                        title="Log in to your customer account">
                                         <i class="fa fa-sign-in"></i>
                                         <span>{% trans 'Sign in' %}</span>
                                     </a>
                                 </div>
                                 <div>
-                                    <a class="register" href="{% url 'users:user_register' %}" rel="nofollow"
+                                    <a class="register" href="{% url 'users:register' %}" rel="nofollow"
                                        title="Register Account">
                                         <i class="fa fa-user"></i>
                                         <span>{% trans 'Register Account' %}</span>
@@ -237,21 +237,21 @@
 
                     <!-- language -->
                     <select class="form-select language-select" aria-label="Select language"
-                                    onchange="location = this.value;">
-                                {% get_current_language as LANGUAGE_CODE %}
-                                {% get_available_languages as languages %}
-                                {% for language in languages %}
-                                    {% if language.0 != LANGUAGE_CODE %}
-                                        <option value="{% get_full_url request language.0 %}">
-                                            {{ language.1 }}
-                                        </option>
-                                    {% else %}
-                                        <option value="{{ language.0 }}" disabled selected>
-                                            {{ language.1 }}
-                                        </option>
-                                    {% endif %}
-                                {% endfor %}
-                            </select>
+                            onchange="location = this.value;">
+                        {% get_current_language as LANGUAGE_CODE %}
+                        {% get_available_languages as languages %}
+                        {% for language in languages %}
+                            {% if language.0 != LANGUAGE_CODE %}
+                                <option value="{% get_full_url request language.0 %}">
+                                    {{ language.1 }}
+                                </option>
+                            {% else %}
+                                <option value="{{ language.0 }}" disabled selected>
+                                    {{ language.1 }}
+                                </option>
+                            {% endif %}
+                        {% endfor %}
+                    </select>
                 </div>
             </div>
         </div>
