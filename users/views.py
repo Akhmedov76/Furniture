@@ -22,20 +22,23 @@ class UserWishListView(TemplateView):
     template_name = 'user-wishlist.html'
 
 
-from django.contrib.auth import authenticate, login, logout
-from django.contrib.auth.models import User
-from django.contrib.sites.shortcuts import get_current_site
-from django.core.mail import EmailMultiAlternatives
-from django.shortcuts import render, redirect
-from django.template.loader import render_to_string
 from django.urls import reverse_lazy, reverse
-from django.utils.encoding import force_str, force_bytes
-from django.utils.http import urlsafe_base64_decode, urlsafe_base64_encode
-from django.views.decorators.csrf import csrf_protect
 
 from conf.settings import EMAIL_HOST_USER
 from users.form import LoginForm, RegistrationForm
 from users.token import account_activation_token
+from django.views.generic import TemplateView
+from django.urls import reverse_lazy
+from django.shortcuts import redirect, render
+from django.contrib.auth import authenticate, login, logout
+from django.utils.http import urlsafe_base64_encode, urlsafe_base64_decode
+from django.utils.encoding import force_bytes, force_str
+from django.template.loader import render_to_string
+from django.core.mail import EmailMultiAlternatives
+from django.contrib.auth.models import User
+from django.contrib.sites.shortcuts import get_current_site
+from django.views.decorators.csrf import csrf_protect
+from django.utils.decorators import method_decorator
 
 
 def verify_email(request, uidb64, token):
@@ -71,9 +74,11 @@ def send_email_verification(request, user):
     message.send()
 
 
-@csrf_protect
-def register_view(request):
-    if request.method == 'POST':
+@method_decorator(csrf_protect, name='dispatch')
+class RegisterView(TemplateView):
+    template_name = 'user-register.html'
+
+    def post(self, request, *args, **kwargs):
         form = RegistrationForm(request.POST)
         if form.is_valid():
             user = form.save(commit=False)
@@ -85,14 +90,17 @@ def register_view(request):
             return redirect(reverse_lazy('users:login'))
         else:
             errors = form.errors
-            return render(request, 'user-register.html', {'errors': errors, 'form': form})
-    else:
+            return self.render_to_response({'errors': errors, 'form': form})
+
+    def get(self, request, *args, **kwargs):
         form = RegistrationForm()
-        return render(request, 'user-register.html', {'form': form})
+        return self.render_to_response({'form': form})
 
 
-def login_view(request):
-    if request.method == 'POST':
+class LoginView(TemplateView):
+    template_name = 'user-login.html'
+
+    def post(self, request, *args, **kwargs):
         form = LoginForm(request.POST)
         if form.is_valid():
             username = form.cleaned_data['username']
@@ -103,10 +111,14 @@ def login_view(request):
                 return redirect(reverse_lazy('home_page:home'))
             else:
                 errors = form.errors
-                return render(request, 'user-login.html', {'errors': errors})
-    return render(request, 'user-login.html')
+                return self.render_to_response({'errors': errors})
+        return self.render_to_response({})
+
+    def get(self, request, *args, **kwargs):
+        return self.render_to_response({})
 
 
-def logout_view(request):
-    logout(request)
-    return redirect('/')
+class LogoutView(TemplateView):
+    def get(self, request, *args, **kwargs):
+        logout(request)
+        return redirect('/')
