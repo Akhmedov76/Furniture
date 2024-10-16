@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-10-15 21:48+0500\n"
+"POT-Creation-Date: 2024-10-16 11:19+0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -20,6 +20,7 @@ msgstr ""
 
 #: .\templates\contact.html:21 .\templates\home.html:5
 #: .\templates\layouts\header_base.html:99 .\templates\user-account.html:18
+#: .\templates\user-register.html:19
 msgid "Home"
 msgstr "Home"
 
@@ -31,7 +32,7 @@ msgstr "Contact"
 msgid "Contact Us"
 msgstr "Contact Us"
 
-#: .\templates\contact.html:48
+#: .\templates\contact.html:48 .\templates\user-register.html:65
 msgid "Email"
 msgstr "Email"
 
@@ -42,6 +43,14 @@ msgstr "Address"
 #: .\templates\contact.html:81
 msgid "Hotline"
 msgstr "Hotline"
+
+#: .\templates\home.html:1328
+msgid "Deal Of The Day"
+msgstr ""
+
+#: .\templates\home.html:1329
+msgid "Hurry Up, The Same Time Is Not Extended"
+msgstr ""
 
 #: .\templates\home.html:2482
 msgid ""
@@ -92,7 +101,9 @@ msgid "My Wishlists"
 msgstr "My Wishlists"
 
 #: .\templates\layouts\header_base.html:292
-msgid "FREE DELIVERY From $ 250"
+#, fuzzy
+#| msgid "FREE DELIVERY From $ 250"
+msgid "FREE DELIVERY From"
 msgstr "FREE DELIVERY From $ 250"
 
 #: .\templates\layouts\header_base.html:304
@@ -147,11 +158,31 @@ msgstr "History"
 msgid "You haven not placed any orders yet."
 msgstr "You haven not placed any orders yet."
 
-#: .\templates\user-register.html:41 .\templates\user-register.html:81
+#: .\templates\user-register.html:24
+msgid "About us"
+msgstr ""
+
+#: .\templates\user-register.html:41 .\templates\user-register.html:82
 #, fuzzy
 #| msgid "My Account"
 msgid "Create Account"
 msgstr "My Account"
+
+#: .\templates\user-register.html:47
+msgid "First name"
+msgstr ""
+
+#: .\templates\user-register.html:53
+msgid "Last name"
+msgstr ""
+
+#: .\templates\user-register.html:59
+msgid "Username"
+msgstr ""
+
+#: .\templates\user-register.html:73
+msgid "Password"
+msgstr ""
 
 #, fuzzy
 #~| msgid "Contact Us"

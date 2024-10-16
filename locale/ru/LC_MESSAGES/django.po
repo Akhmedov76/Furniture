@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-10-15 21:48+0500\n"
+"POT-Creation-Date: 2024-10-16 11:19+0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -22,6 +22,7 @@ msgstr ""
 
 #: .\templates\contact.html:21 .\templates\home.html:5
 #: .\templates\layouts\header_base.html:99 .\templates\user-account.html:18
+#: .\templates\user-register.html:19
 msgid "Home"
 msgstr "Главная"
 
@@ -31,11 +32,11 @@ msgstr "Контакт"
 
 #: .\templates\contact.html:36 .\templates\layouts\header_base.html:122
 msgid "Contact Us"
-msgstr "Электронная почта"
+msgstr "Связаться с нами"
 
-#: .\templates\contact.html:48
+#: .\templates\contact.html:48 .\templates\user-register.html:65
 msgid "Email"
-msgstr ""
+msgstr "Электронная почта"
 
 #: .\templates\contact.html:65 .\templates\user-account.html:47
 msgid "Address"
@@ -44,6 +45,14 @@ msgstr "Адрес"
 #: .\templates\contact.html:81
 msgid "Hotline"
 msgstr "Горячая линия"
+
+#: .\templates\home.html:1328
+msgid "Deal Of The Day"
+msgstr "Сделка дня"
+
+#: .\templates\home.html:1329
+msgid "Hurry Up, The Same Time Is Not Extended"
+msgstr "Поторопитесь, это же время не продлевается"
 
 #: .\templates\home.html:2482
 msgid ""
@@ -94,7 +103,9 @@ msgid "My Wishlists"
 msgstr "Мои списки желаний"
 
 #: .\templates\layouts\header_base.html:292
-msgid "FREE DELIVERY From $ 250"
+#, fuzzy
+#| msgid "FREE DELIVERY From $ 250"
+msgid "FREE DELIVERY From"
 msgstr "БЕСПЛАТНАЯ ДОСТАВКА от $250"
 
 #: .\templates\layouts\header_base.html:304
@@ -149,11 +160,31 @@ msgstr "История"
 msgid "You haven not placed any orders yet."
 msgstr "Вы еще не разместили ни одного заказа."
 
-#: .\templates\user-register.html:41 .\templates\user-register.html:81
+#: .\templates\user-register.html:24
+msgid "About us"
+msgstr "О нас"
+
+#: .\templates\user-register.html:41 .\templates\user-register.html:82
 #, fuzzy
 #| msgid "My Account"
 msgid "Create Account"
 msgstr "Мой счет"
+
+#: .\templates\user-register.html:47
+msgid "First name"
+msgstr "Имя"
+
+#: .\templates\user-register.html:53
+msgid "Last name"
+msgstr "Фамилия"
+
+#: .\templates\user-register.html:59
+msgid "Username"
+msgstr "Имя пользователя"
+
+#: .\templates\user-register.html:73
+msgid "Password"
+msgstr "Пароль"
 
 #, fuzzy
 #~| msgid "Contact Us"

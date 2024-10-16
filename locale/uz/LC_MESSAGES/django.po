@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-10-15 21:48+0500\n"
+"POT-Creation-Date: 2024-10-16 11:19+0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -20,6 +20,7 @@ msgstr ""
 
 #: .\templates\contact.html:21 .\templates\home.html:5
 #: .\templates\layouts\header_base.html:99 .\templates\user-account.html:18
+#: .\templates\user-register.html:19
 msgid "Home"
 msgstr "Asosiy sahifa"
 
@@ -31,7 +32,7 @@ msgstr "Aloqa"
 msgid "Contact Us"
 msgstr "Biz bilan bog'lanish"
 
-#: .\templates\contact.html:48
+#: .\templates\contact.html:48 .\templates\user-register.html:65
 msgid "Email"
 msgstr "Elektron pochta"
 
@@ -43,13 +44,21 @@ msgstr "Manzil"
 msgid "Hotline"
 msgstr "Ishonch telefoni"
 
+#: .\templates\home.html:1328
+msgid "Deal Of The Day"
+msgstr "Kunning bitimi"
+
+#: .\templates\home.html:1329
+msgid "Hurry Up, The Same Time Is Not Extended"
+msgstr "Shoshiling, bir xil vaqt uzaytirilmagan"
+
 #: .\templates\home.html:2482
 msgid ""
 "Sign up to our newsletter to get the latest articles, lookbooks voucher "
 "codesdirect to your inbox"
 msgstr ""
 "Eng so'nggi maqolalar, lookbooks vaucherlarini olish uchun bizning axborot "
-"byulletenimizga obuna bo'ling kodlar pochta qutingizga yo'naltiriladi"
+"byulletenimizga obuna boling kodlar pochta qutingizga yonaltiriladi"
 
 #: .\templates\home.html:2489
 msgid "Enter Your Email"
@@ -81,7 +90,7 @@ msgstr "Tizimga kirish"
 #, fuzzy
 #| msgid "My Account"
 msgid "Register Account"
-msgstr "Mening hisobim"
+msgstr "Ro'yxatdan o'tkazish"
 
 #: .\templates\layouts\header_base.html:166
 msgid "Checkout"
@@ -93,9 +102,8 @@ msgstr "Mening istaklarim"
 
 #: .\templates\layouts\header_base.html:292
 #, fuzzy
-#| msgid "FREE DELIVERY"
-msgid "FREE DELIVERY From $ 250"
-msgstr "250$ dan yetkazib berish bepul"
+msgid "FREE DELIVERY From"
+msgstr "dan yetkazib berish bepul"
 
 #: .\templates\layouts\header_base.html:304
 msgid "MONEY BACK"
@@ -149,19 +157,27 @@ msgstr "Tarix"
 msgid "You haven not placed any orders yet."
 msgstr "Siz hali hech qanday buyurtma bermadingiz."
 
-#: .\templates\user-register.html:41 .\templates\user-register.html:81
+#: .\templates\user-register.html:24
+msgid "About us"
+msgstr "Biz haqimizda"
+
+#: .\templates\user-register.html:41 .\templates\user-register.html:82
 #, fuzzy
-#| msgid "My Account"
 msgid "Create Account"
-msgstr "Mening hisobim"
+msgstr "Hisob yaratish"
 
-#, fuzzy
-#~| msgid "Contact Us"
-#~ msgid "Contact US"
-#~ msgstr "Biz bilan bog'lanish"
+#: .\templates\user-register.html:47
+msgid "First name"
+msgstr "Ism"
 
-#~ msgid "From $ 250"
-#~ msgstr "250 dollardan"
+#: .\templates\user-register.html:53
+msgid "Last name"
+msgstr "Familiya"
 
-#~ msgid "From"
-#~ msgstr "dan"
+#: .\templates\user-register.html:59
+msgid "Username"
+msgstr "Foydalanuvchi nomi"
+
+#: .\templates\user-register.html:73
+msgid "Password"
+msgstr "Parol"

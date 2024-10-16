@@ -19,7 +19,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="{% url 'users:user_login' %}">
+                                <a href="{% url 'users:login' %}">
                                     <span>Login</span>
                                 </a>
                             </li>
@@ -37,7 +37,8 @@
                     <div class="container">
                         <h1 class="text-center title-page">Log In</h1>
                         <div class="login-form">
-                            <form id="customer-form" action="#" method="post">
+                            <form id="customer-form" action="{% url 'users:login' %}" method="post">
+                                {% csrf_token %}
                                 <div>
                                     <input type="hidden" name="back" value="my-account">
                                     <div class="form-group no-gutters">
@@ -51,7 +52,7 @@
                                     </div>
                                     <div class="no-gutters text-center">
                                         <div class="forgot-password">
-                                            <a href="{% url 'users:Reset_Password' %}" rel="nofollow">
+                                            <a href="{% url 'users:reset-password' %}" rel="nofollow">
                                                 Forgot your password?
                                             </a>
                                         </div>
@@ -61,7 +62,7 @@
                                     <div class="text-center no-gutters">
                                         <input type="hidden" name="submitLogin" value="1">
                                         <button class="btn btn-primary" data-link-action="sign-in" type="submit">
-                                            Sign in
+                                            <a href="{% url 'home:home' %}">Sign in</a>
                                         </button>
                                     </div>
                                 </div>

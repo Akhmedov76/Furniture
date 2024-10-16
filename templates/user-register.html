@@ -2,7 +2,7 @@
 {% load static %}
 {% load i18n %}
 
-{% block title %}Registration{% endblock %}
+{% block title %}{% trans 'Registration' %}{% endblock %}
 {% block body_id %}contact{% endblock %}
 
 {% block content %}
@@ -16,12 +16,12 @@
                         <ol>
                             <li>
                                 <a href="{% url 'home:home' %}">
-                                    <span>Home</span>
+                                    <span>{% trans 'Home' %}</span>
                                 </a>
                             </li>
                             <li>
                                 <a href="{% url 'common:about' %}">
-                                    <span>About us</span>
+                                    <span>{% trans 'About us' %}</span>
                                 </a>
                             </li>
                         </ol>
@@ -39,46 +39,50 @@
                             <div id="content" class="page-content">
                                 <div class="register-form text-center">
                                     <h1 class="text-center title-page">{% trans 'Create Account' %}</h1>
-                                    <form action="#" id="customer-form" class="js-customer-form" method="post">
+                                    <form action="{% url 'users:register' %}" id="customer-form"
+                                          class="js-customer-form" method="post">
+                                        {% csrf_token %}
                                         <div>
                                             <div class="form-group">
                                                 <div>
                                                     <input class="form-control" name="firstname" type="text"
-                                                           placeholder="First name">
+                                                           placeholder="{% trans 'First name' %}">
                                                 </div>
                                             </div>
                                             <div class="form-group">
                                                 <div>
                                                     <input class="form-control" name="lastname" type="text"
-                                                           placeholder="Last name">
+                                                           placeholder="{% trans 'Last name' %}">
                                                 </div>
                                             </div>
                                             <div class="form-group">
                                                 <div>
                                                     <input class="form-control" name="username" type="text"
-                                                           placeholder="Username">
+                                                           placeholder="{% trans 'Username' %}">
                                                 </div>
                                             </div>
                                             <div class="form-group">
                                                 <div>
                                                     <input class="form-control" name="email" type="email"
-                                                           placeholder="Email">
+                                                           placeholder="{% trans 'Email' %}">
                                                 </div>
                                             </div>
                                             <div class="form-group">
                                                 <div>
                                                     <div class="input-group js-parent-focus">
                                                         <input class="form-control js-child-focus js-visible-password"
-                                                               name="password" type="password" placeholder="Password">
+                                                               name="password" type="password"
+                                                               placeholder="{% trans 'Password' %}">
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="clearfix">
                                             <div>
-                                                <button class="btn btn-primary" data-link-action="sign-in"
-                                                        type="submit">
-                                                    {% trans 'Create Account' %}
+                                                <button class="btn btn-primary"
+                                                        data-link-action="sign-in"
+                                                        type="submit"><a
+                                                        href="{% url 'users:login' %}">{% trans 'Create Account' %}</a>
                                                 </button>
                                             </div>
                                         </div>

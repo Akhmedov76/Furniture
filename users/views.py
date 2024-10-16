@@ -1,4 +1,3 @@
-from django.shortcuts import render
 from django.views.generic import TemplateView
 
 
@@ -6,12 +5,13 @@ class UserAccountView(TemplateView):
     template_name = 'user-account.html'
 
 
-class UserLoginView(TemplateView):
-    template_name = 'user-login.html'
+#
+# class UserLoginView(TemplateView):
+#     template_name = 'user-login.html'
 
 
-class UserRegisterView(TemplateView):
-    template_name = 'user-register.html'
+# class UserRegisterView(TemplateView):
+#     template_name = 'user-register.html'
 
 
 class UserResetPasswordView(TemplateView):
@@ -22,13 +22,11 @@ class UserWishListView(TemplateView):
     template_name = 'user-wishlist.html'
 
 
-from django.urls import reverse_lazy, reverse
-
 from conf.settings import EMAIL_HOST_USER
 from users.form import LoginForm, RegistrationForm
 from users.token import account_activation_token
 from django.views.generic import TemplateView
-from django.urls import reverse_lazy
+from django.urls import reverse_lazy, reverse
 from django.shortcuts import redirect, render
 from django.contrib.auth import authenticate, login, logout
 from django.utils.http import urlsafe_base64_encode, urlsafe_base64_decode
@@ -43,7 +41,11 @@ from django.utils.decorators import method_decorator
 
 def verify_email(request, uidb64, token):
     uid = force_str(urlsafe_base64_decode(uidb64))
-    user = User.objects.get(pk=uid)
+    try:
+        user = User.objects.get(pk=uid)
+    except User.DoesNotExist:
+        user = None
+
     if user is not None and account_activation_token.check_token(user, token):
         user.is_active = True
         user.save()
@@ -74,6 +76,7 @@ def send_email_verification(request, user):
     message.send()
 
 
+# @method_decorator(csrf_protect, name='dispatch')
 @method_decorator(csrf_protect, name='dispatch')
 class RegisterView(TemplateView):
     template_name = 'user-register.html'
@@ -85,7 +88,6 @@ class RegisterView(TemplateView):
             user.set_password(form.cleaned_data['password1'])
             user.is_active = False
             user.save()
-            # send email verification
             send_email_verification(request, user)
             return redirect(reverse_lazy('users:login'))
         else:
@@ -103,9 +105,9 @@ class LoginView(TemplateView):
     def post(self, request, *args, **kwargs):
         form = LoginForm(request.POST)
         if form.is_valid():
-            username = form.cleaned_data['username']
+            email = form.cleaned_data['email']
             password = form.cleaned_data['password']
-            user = authenticate(request=request, username=username, password=password)
+            user = authenticate(request=request, email=email, password=password)
             if user is not None:
                 login(user=user, request=request)
                 return redirect(reverse_lazy('home_page:home'))
