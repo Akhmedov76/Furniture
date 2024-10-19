@@ -3,7 +3,7 @@
 {% load i18n %}
 
 {% block title %}Login{% endblock %}
-{% block body_id %}contact{% endblock %}
+{% block body_class %}user-login {% endblock %}
 {% block content %}
     <div class="main-content">
         <div class="wrap-banner">
@@ -52,7 +52,7 @@
                                     </div>
                                     <div class="no-gutters text-center">
                                         <div class="forgot-password">
-                                            <a href="{% url 'users:reset-password' %}" rel="nofollow">
+                                            <a href="#" rel="nofollow">
                                                 Forgot your password?
                                             </a>
                                         </div>

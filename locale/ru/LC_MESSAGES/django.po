@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-10-16 11:19+0500\n"
+"POT-Creation-Date: 2024-10-19 14:32+0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,8 +21,9 @@ msgstr ""
 "(n%100>=11 && n%100<=14)? 2 : 3);\n"
 
 #: .\templates\contact.html:21 .\templates\home.html:5
-#: .\templates\layouts\header_base.html:99 .\templates\user-account.html:18
-#: .\templates\user-register.html:19
+#: .\templates\layouts\header_base.html:99
+#: .\templates\registration\user-account.html:18
+#: .\templates\registration\user-register.html:19
 msgid "Home"
 msgstr "Главная"
 
@@ -34,11 +35,11 @@ msgstr "Контакт"
 msgid "Contact Us"
 msgstr "Связаться с нами"
 
-#: .\templates\contact.html:48 .\templates\user-register.html:65
+#: .\templates\contact.html:48 .\templates\registration\user-register.html:67
 msgid "Email"
 msgstr "Электронная почта"
 
-#: .\templates\contact.html:65 .\templates\user-account.html:47
+#: .\templates\contact.html:65 .\templates\registration\user-account.html:47
 msgid "Address"
 msgstr "Адрес"
 
@@ -79,8 +80,9 @@ msgid "Page"
 msgstr "Страница"
 
 #: .\templates\layouts\header_base.html:136
-#: .\templates\layouts\header_base.html:146 .\templates\user-account.html:23
-#: .\templates\user-account.html:34
+#: .\templates\layouts\header_base.html:146
+#: .\templates\registration\user-account.html:23
+#: .\templates\registration\user-account.html:34
 msgid "My Account"
 msgstr "Мой счет"
 
@@ -120,70 +122,83 @@ msgstr "ГАРАНТИРОВАННО"
 msgid "Search"
 msgstr "Поиск"
 
-#: .\templates\user-account.html:39
+#: .\templates\registration\user-account.html:39
 msgid "My Name"
 msgstr "Имя"
 
-#: .\templates\user-account.html:43
+#: .\templates\registration\user-account.html:43
 msgid "Company"
 msgstr "Компания"
 
-#: .\templates\user-account.html:51
+#: .\templates\registration\user-account.html:51
 msgid "City"
 msgstr "Город"
 
-#: .\templates\user-account.html:55
+#: .\templates\registration\user-account.html:55
 msgid "Postal/Zip Code"
 msgstr "Почтовый индекс"
 
-#: .\templates\user-account.html:59
+#: .\templates\registration\user-account.html:59
 msgid "Phone"
 msgstr "Телефон"
 
-#: .\templates\user-account.html:63
+#: .\templates\registration\user-account.html:63
 msgid "Country"
 msgstr "Страна"
 
-#: .\templates\user-account.html:71
+#: .\templates\registration\user-account.html:71
 msgid "view Address"
 msgstr "Посмотреть адрес"
 
-#: .\templates\user-account.html:74
+#: .\templates\registration\user-account.html:74
 msgid "Order"
 msgstr "Заказ"
 
-#: .\templates\user-account.html:75
+#: .\templates\registration\user-account.html:75
 msgid "History"
 msgstr "История"
 
-#: .\templates\user-account.html:77
+#: .\templates\registration\user-account.html:77
 msgid "You haven not placed any orders yet."
 msgstr "Вы еще не разместили ни одного заказа."
 
-#: .\templates\user-register.html:24
+#: .\templates\registration\user-register.html:5
+#, fuzzy
+#| msgid "My Account"
+msgid "Registration"
+msgstr "Мой счет"
+
+#: .\templates\registration\user-register.html:24
 msgid "About us"
 msgstr "О нас"
 
-#: .\templates\user-register.html:41 .\templates\user-register.html:82
+#: .\templates\registration\user-register.html:41
+#: .\templates\registration\user-register.html:94
 #, fuzzy
 #| msgid "My Account"
 msgid "Create Account"
 msgstr "Мой счет"
 
-#: .\templates\user-register.html:47
+#: .\templates\registration\user-register.html:49
 msgid "First name"
 msgstr "Имя"
 
-#: .\templates\user-register.html:53
+#: .\templates\registration\user-register.html:55
 msgid "Last name"
 msgstr "Фамилия"
 
-#: .\templates\user-register.html:59
+#: .\templates\registration\user-register.html:61
 msgid "Username"
 msgstr "Имя пользователя"
 
-#: .\templates\user-register.html:73
+#: .\templates\registration\user-register.html:75
 msgid "Password"
+msgstr "Пароль"
+
+#: .\templates\registration\user-register.html:84
+#, fuzzy
+#| msgid "Password"
+msgid "Confirm Password"
 msgstr "Пароль"
 
 #, fuzzy

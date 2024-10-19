@@ -44,7 +44,7 @@
 </head>
 `
 
-<body id="{% block body_id %}{% endblock %}" class="blog">
+<body id="{% block body_id %}{% endblock %}" class="{% block body_class %}{% endblock %}blog">
 {% include 'layouts/header_base.html' %}
 
 <!-- main content -->

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-10-16 11:19+0500\n"
+"POT-Creation-Date: 2024-10-19 14:32+0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,8 +19,9 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: .\templates\contact.html:21 .\templates\home.html:5
-#: .\templates\layouts\header_base.html:99 .\templates\user-account.html:18
-#: .\templates\user-register.html:19
+#: .\templates\layouts\header_base.html:99
+#: .\templates\registration\user-account.html:18
+#: .\templates\registration\user-register.html:19
 msgid "Home"
 msgstr "Asosiy sahifa"
 
@@ -32,11 +33,11 @@ msgstr "Aloqa"
 msgid "Contact Us"
 msgstr "Biz bilan bog'lanish"
 
-#: .\templates\contact.html:48 .\templates\user-register.html:65
+#: .\templates\contact.html:48 .\templates\registration\user-register.html:67
 msgid "Email"
 msgstr "Elektron pochta"
 
-#: .\templates\contact.html:65 .\templates\user-account.html:47
+#: .\templates\contact.html:65 .\templates\registration\user-account.html:47
 msgid "Address"
 msgstr "Manzil"
 
@@ -46,7 +47,7 @@ msgstr "Ishonch telefoni"
 
 #: .\templates\home.html:1328
 msgid "Deal Of The Day"
-msgstr "Kunning bitimi"
+msgstr "Kunning yangiliklari"
 
 #: .\templates\home.html:1329
 msgid "Hurry Up, The Same Time Is Not Extended"
@@ -77,8 +78,9 @@ msgid "Page"
 msgstr "Sahifa"
 
 #: .\templates\layouts\header_base.html:136
-#: .\templates\layouts\header_base.html:146 .\templates\user-account.html:23
-#: .\templates\user-account.html:34
+#: .\templates\layouts\header_base.html:146
+#: .\templates\registration\user-account.html:23
+#: .\templates\registration\user-account.html:34
 msgid "My Account"
 msgstr "Mening hisobim"
 
@@ -90,7 +92,7 @@ msgstr "Tizimga kirish"
 #, fuzzy
 #| msgid "My Account"
 msgid "Register Account"
-msgstr "Ro'yxatdan o'tkazish"
+msgstr "Ro'yxatdan o'tish"
 
 #: .\templates\layouts\header_base.html:166
 msgid "Checkout"
@@ -117,67 +119,80 @@ msgstr "KAFOLAT BERILGAN"
 msgid "Search"
 msgstr "Qidiruv"
 
-#: .\templates\user-account.html:39
+#: .\templates\registration\user-account.html:39
 msgid "My Name"
 msgstr "Ismim"
 
-#: .\templates\user-account.html:43
+#: .\templates\registration\user-account.html:43
 msgid "Company"
 msgstr "Kompaniya"
 
-#: .\templates\user-account.html:51
+#: .\templates\registration\user-account.html:51
 msgid "City"
 msgstr "Shahar"
 
-#: .\templates\user-account.html:55
+#: .\templates\registration\user-account.html:55
 msgid "Postal/Zip Code"
 msgstr "Pochta/Pochta indeksi"
 
-#: .\templates\user-account.html:59
+#: .\templates\registration\user-account.html:59
 msgid "Phone"
 msgstr "Telefon"
 
-#: .\templates\user-account.html:63
+#: .\templates\registration\user-account.html:63
 msgid "Country"
 msgstr "Mamlakat"
 
-#: .\templates\user-account.html:71
+#: .\templates\registration\user-account.html:71
 msgid "view Address"
 msgstr "Manzilni ko'rish"
 
-#: .\templates\user-account.html:74
+#: .\templates\registration\user-account.html:74
 msgid "Order"
 msgstr "Buyurtma"
 
-#: .\templates\user-account.html:75
+#: .\templates\registration\user-account.html:75
 msgid "History"
 msgstr "Tarix"
 
-#: .\templates\user-account.html:77
+#: .\templates\registration\user-account.html:77
 msgid "You haven not placed any orders yet."
 msgstr "Siz hali hech qanday buyurtma bermadingiz."
 
-#: .\templates\user-register.html:24
+#: .\templates\registration\user-register.html:5
+#, fuzzy
+#| msgid "My Account"
+msgid "Registration"
+msgstr "Ro'yxatdan o'tkazish"
+
+#: .\templates\registration\user-register.html:24
 msgid "About us"
 msgstr "Biz haqimizda"
 
-#: .\templates\user-register.html:41 .\templates\user-register.html:82
+#: .\templates\registration\user-register.html:41
+#: .\templates\registration\user-register.html:94
 #, fuzzy
 msgid "Create Account"
 msgstr "Hisob yaratish"
 
-#: .\templates\user-register.html:47
+#: .\templates\registration\user-register.html:49
 msgid "First name"
 msgstr "Ism"
 
-#: .\templates\user-register.html:53
+#: .\templates\registration\user-register.html:55
 msgid "Last name"
 msgstr "Familiya"
 
-#: .\templates\user-register.html:59
+#: .\templates\registration\user-register.html:61
 msgid "Username"
 msgstr "Foydalanuvchi nomi"
 
-#: .\templates\user-register.html:73
+#: .\templates\registration\user-register.html:75
 msgid "Password"
 msgstr "Parol"
+
+#: .\templates\registration\user-register.html:84
+#, fuzzy
+#| msgid "Password"
+msgid "Confirm Password"
+msgstr "Parolni tasdiqlang"

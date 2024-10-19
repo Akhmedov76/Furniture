@@ -33,7 +33,7 @@ urlpatterns += i18n_patterns(
     path('common/', include('common.urls', namespace='common')),
     path('products/', include('products.urls', namespace='products')),
     path('blogs/', include('blogs.urls', namespace='blogs')),
-    path('users/', include('users.urls', namespace='users')),
+    path('accounts/', include('accounts.urls', namespace='accounts')),
 )
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_URL)
 
