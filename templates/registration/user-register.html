@@ -1,0 +1,109 @@
+{% extends 'layouts/base.html' %}
+{% load static %}
+{% load i18n %}
+
+{% block title %}{% trans 'Registration' %}{% endblock %}
+{% block body_class %}user-register {% endblock %}
+
+{% block content %}
+    <div class="main-content">
+        <div class="wrap-banner">
+
+            <!-- breadcrumb -->
+            <nav class="breadcrumb-bg">
+                <div class="container no-index">
+                    <div class="breadcrumb">
+                        <ol>
+                            <li>
+                                <a href="{% url 'home:home' %}">
+                                    <span>{% trans 'Home' %}</span>
+                                </a>
+                            </li>
+                            <li>x
+                                <a href="{% url 'common:about' %}">
+                                    <span>{% trans 'About us' %}</span>
+                                </a>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+        <!-- main -->
+        <div id="wrapper-site">
+            <div class="container">
+                <div class="row">
+                    <div id="content-wrapper" class="col-xs-12 col-sm-12 col-md-12 col-lg-12 onecol">
+                        <div id="main">
+                            <div id="content" class="page-content">
+                                <div class="register-form text-center">
+                                    <h1 class="text-center title-page">{% trans 'Create Account' %}</h1>
+                                    {% for message in messages %}
+                                        <div class="alert alert-{% if message.level_tag == 'ERROR' %}danger{% else %}success{% endif %} alert-dismissible fade show" role="alert">
+                                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                            {{ message }}
+                                        </div>
+                                    {% endfor %}
+                                    <form action="{% url 'users:register' %}" id="customer-form"
+                                          class="js-customer-form" method="post">
+                                        {% csrf_token %}
+                                        <div>
+                                            <div class="form-group">
+                                                <div>
+                                                    <input class="form-control" name="first_name" type="text"
+                                                           placeholder="{% trans 'First name' %}">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <div>
+                                                    <input class="form-control" name="last_name" type="text"
+                                                           placeholder="{% trans 'Last name' %}">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <div>
+                                                    <input class="form-control" name="email" type="email"
+                                                           placeholder="{% trans 'Email' %}">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <div>
+                                                    <div class="input-group js-parent-focus">
+                                                        <input class="form-control js-child-focus js-visible-password"
+                                                               name="password1" type="password"
+                                                               placeholder="{% trans 'Password' %}">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <div>
+                                                    <div class="input-group js-parent-focus">
+                                                        <input class="form-control js-child-focus js-visible-password"
+                                                               name="password2" type="password"
+                                                               placeholder="{% trans 'Confirm Password' %}">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="clearfix">
+                                            <div>
+                                                <button class="btn btn-primary"
+                                                        data-link-action="sign-in"
+                                                        type="submit">
+                                                    {% trans 'Create Account' %}
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

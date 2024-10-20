@@ -1,0 +1,85 @@
+{% extends 'layouts/base.html' %}
+{% load static %}
+{% load i18n %}
+
+{% block title %}Profile{% endblock %}
+{% block body_id %}contact{% endblock %}
+{% block content %}
+    <div class="main-content">
+        <div class="wrap-banner">
+
+            <!-- breadcrumb -->
+            <nav class="breadcrumb-bg">
+                <div class="container no-index">
+                    <div class="breadcrumb">
+                        <ol>
+                            <li>
+                                <a href="{% url 'home:home' %}">
+                                    <span>{% trans 'Home' %}</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{% url 'accounts:account' %}">
+                                    <span>{% trans 'My Account' %}</span>
+                                </a>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </nav>
+
+            <div class="acount head-acount">
+                <div class="container">
+                    <div id="main">
+                        <h1 class="title-page">{% trans 'My Account' %}</h1>
+                        <div class="content" id="block-history">
+                            <table class="std table">
+                                <tbody>
+                                <tr>
+                                    <th class="first_item">{% trans 'My Name' %} :</th>
+                                    <td>David James</td>
+                                </tr>
+                                <tr>
+                                    <th class="first_item">{% trans 'Company' %} :</th>
+                                    <td>TivaTheme</td>
+                                </tr>
+                                <tr>
+                                    <th class="first_item">{% trans 'Address' %} :</th>
+                                    <td>123 canberra Street, New York, USA</td>
+                                </tr>
+                                <tr>
+                                    <th class="first_item">{% trans 'City' %} :</th>
+                                    <td>New York</td>
+                                </tr>
+                                <tr>
+                                    <th class="first_item">{% trans 'Postal/Zip Code' %} :</th>
+                                    <td>10001</td>
+                                </tr>
+                                <tr>
+                                    <th class="first_item">{% trans 'Phone' %} :</th>
+                                    <td>0123456789</td>
+                                </tr>
+                                <tr>
+                                    <th class="first_item">{% trans 'Country' %}:</th>
+                                    <td>USA</td>
+                                </tr>
+                                </tbody>
+                            </table>
+
+                        </div>
+                        <button class="btn btn-primary" data-link-action="sign-in" type="submit">
+                            {% trans 'view Address' %}
+                        </button>
+                        <div class="order">
+                            <h4>{% trans 'Order' %}
+                                <span class="detail">{% trans 'History' %}</span>
+                            </h4>
+                            <p>{% trans 'You haven not placed any orders yet.' %}</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
