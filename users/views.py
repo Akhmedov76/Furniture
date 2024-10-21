@@ -65,7 +65,7 @@ class RegisterView(CreateView):
 
     def form_valid(self, form):
         user = form.save(commit=False)
-        user.is_active = True
+        user.is_active = False
         user.save()
         send_email_verification(self.request, user)
         message = _('Registration was successfully registered')
