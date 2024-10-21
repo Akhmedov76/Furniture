@@ -19,7 +19,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="{% url 'users:login' %}">
+                                <a href="{% url 'user:login' %}">
                                     <span>Login</span>
                                 </a>
                             </li>
@@ -45,7 +45,7 @@
                                     </button>
                                 </div>
                             {% endfor %}
-                            <form id="customer-form" action="{% url 'users:login' %}" method="post">
+                            <form id="customer-form" action="{% url 'user:login' %}" method="post">
                                 {% csrf_token %}
                                 <div>
                                     <input type="hidden" name="back" value="my-account">

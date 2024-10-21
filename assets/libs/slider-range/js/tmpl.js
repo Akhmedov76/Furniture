@@ -29,7 +29,7 @@
           .split("\r").join("\\'")
       + "');}return p.join('');");
     
-    // Provide some basic currying to the users
+    // Provide some basic currying to the user
     return data ? fn( data ) : fn;
   };
 })();

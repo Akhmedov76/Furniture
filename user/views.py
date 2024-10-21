@@ -4,8 +4,9 @@ from django.utils.translation import gettext_lazy as _
 from django.views.generic import CreateView
 
 from conf.settings import EMAIL_HOST_USER
-from users.forms import RegistrationForm, LoginForm
-from users.token import account_activation_token
+from user.forms import RegistrationForm, LoginForm
+from user.models import UserModel
+from user.token import account_activation_token
 from django.views.generic import TemplateView
 from django.urls import reverse_lazy, reverse
 from django.shortcuts import redirect, render
@@ -24,7 +25,7 @@ class UserAccountView(TemplateView):
 def verify_email(request, uidb64, token):
     uid = force_str(urlsafe_base64_decode(uidb64))
     try:
-        user = User.objects.get(pk=uid)
+        user = UserModel.objects.get(pk=uid)
     except User.DoesNotExist:
         user = None
 
@@ -40,7 +41,7 @@ def send_email_verification(request, user):
     token = account_activation_token.make_token(user)
     uid = urlsafe_base64_encode(force_bytes(user.pk))
     current_site = get_current_site(request)
-    verification_url = reverse('users:verify-email', kwargs={'uidb64': uid, 'token': token})
+    verification_url = reverse('user:verify-email', kwargs={'uidb64': uid, 'token': token})
     full_url = f"http://{current_site.domain}{verification_url}"
 
     text_content = render_to_string(
@@ -76,7 +77,17 @@ class RegisterView(CreateView):
 class LoginUserView(LoginView):
     template_name = 'registration/user-login.html'
     form_class = LoginForm
-    success_url = reverse_lazy('home_page:home')
+    success_url = reverse_lazy('home:home')
+
+    def form_valid(self, form):
+        user = form.get_user()
+
+        if user is not None and not user.is_active:
+            message = _('Your email is not verified. Please verify your email.')
+            messages.error(self.request, message)
+            return redirect('users:login')
+
+        return super().form_valid(form)
 
 
 class UserResetPasswordView(TemplateView):

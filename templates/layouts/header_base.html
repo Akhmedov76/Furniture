@@ -119,7 +119,7 @@
                                 </div>
                             </li>
                             <li>
-                                <a href="{% url 'contact:contact' %}" class="parent">{% trans 'Contact Us' %}</a>
+                                <a href="{% url 'contact:contact-us' %}" class="parent">{% trans 'Contact Us' %}</a>
                             </li>
                         </ul>
                     </div>
@@ -140,21 +140,21 @@
                         <div id="acount" class="collapse">
                             <div class="account-list-content">
                                 <div>
-                                    <a class="login" href="{% url 'users:account' %}" rel="nofollow"
+                                    <a class="login" href="{% url 'accounts:account' %}" rel="nofollow"
                                        title="Log in to your customer account">
                                         <i class="fa fa-cog"></i>
                                         <span>{% trans 'My Account' %}</span>
                                     </a>
                                 </div>
                                 <div>
-                                    <a class="login" href="{% url 'users:login' %}" rel="nofollow"
+                                    <a class="login" href="{% url 'accounts:login' %}" rel="nofollow"
                                        title="Log in to your customer account">
                                         <i class="fa fa-sign-in"></i>
                                         <span>{% trans 'Sign in' %}</span>
                                     </a>
                                 </div>
                                 <div>
-                                    <a class="register" href="{% url 'users:register' %}" rel="nofollow"
+                                    <a class="register" href="{% url 'accounts:register' %}" rel="nofollow"
                                        title="Register Account">
                                         <i class="fa fa-user"></i>
                                         <span>{% trans 'Register Account' %}</span>

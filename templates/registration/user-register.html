@@ -47,7 +47,7 @@
                                             {{ message }}
                                         </div>
                                     {% endfor %}
-                                    <form action="{% url 'users:register' %}" id="customer-form"
+                                    <form action="{% url 'user:register' %}" id="customer-form"
                                           class="js-customer-form" method="post">
                                         {% csrf_token %}
                                         <div>

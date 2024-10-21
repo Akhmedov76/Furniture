@@ -23,7 +23,7 @@ INSTALLED_APPS = [
     'blogs',
     'contact',
     'products',
-    'users',
+    'user',
 ]
 
 MIDDLEWARE = [
@@ -117,4 +117,4 @@ try:
 except ImportError:
     pass
 
-AUTH_USER_MODEL = 'users.UserModel'
+AUTH_USER_MODEL = 'user.UserModel'

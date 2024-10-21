@@ -1,9 +1,9 @@
 from django.urls import path
 
-from users import views
-from users.views import verify_email
+from user import views
+from user.views import verify_email
 
-app_name = 'users'
+app_name = 'user'
 urlpatterns = [
     path('account/', views.UserAccountView.as_view(), name='account'),
     path('login/', views.LoginUserView.as_view(), name='login'),
