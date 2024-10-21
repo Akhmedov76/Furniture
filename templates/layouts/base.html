@@ -1,5 +1,5 @@
-{% load static %}
 <!DOCTYPE html>
+{% load static %}
 <!--[if IE 8 ]>
 <html class="ie ie8" lang="en"> <![endif]-->
 <!--[if IE 9 ]>
@@ -42,7 +42,6 @@
     <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'css/reponsive.css' %}">
 </head>
-`
 
 <body id="{% block body_id %}{% endblock %}" class="{% block body_class %}{% endblock %}blog">
 {% include 'layouts/header_base.html' %}

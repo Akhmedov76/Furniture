@@ -1,0 +1,73 @@
+{% load static %}
+
+<div class="sidebar-3 sidebar-collection col-lg-3 col-md-4 col-sm-4">
+
+
+    <!-- best seller -->
+    <div class="sidebar-block">
+        <div class="new-item-content">
+            <h3 class="title-product">Manufacture</h3>
+            <ul class="scroll-product">
+                {% for company in companies %}
+                    <li>
+                        <label class="check">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                        </label>
+                        <a href="#">
+                            <b>{{ company.title }}</b>
+                            <span class="quantity">(30)</span>
+                        </a>
+                    </li>
+
+                {% endfor %}
+            </ul>
+        </div>
+        <div class="tiva-filter-price new-item-content sidebar-block">
+            <h3 class="title-product">By Price</h3>
+            <div id="block_price_filter" class="block">
+                <div class="block-content">
+                    <div id="slider-range" class="tiva-filter">
+                        <div class="filter-itemprice-filter">
+                            <div class="layout-slider">
+                                <input id="price-filter" name="price" value="0;100"/>
+                            </div>
+                            <div class="layout-slider-settings"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="sidebar-block by-color">
+            <h3 class="title-product">By Color</h3>
+            {% for color in colors %}
+                <div>
+                                                    <span class="left">
+                                                        <label class="color-item1"></label>
+                                                        <a href="#">
+                                                            <span>{{ color.title }}
+                                                                <span>(30)</span>
+                                                            </span>
+                                                        </a>
+                                                    </span>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <!-- product tag -->
+    <div class="sidebar-block product-tags">
+        <div class="title-block">
+            Product Tags
+        </div>
+        <div class="block-content">
+            <ul class="listSidebarBlog list-unstyled">
+                {% for tag in tags %}
+                    <li>
+                        <a href="#" title="Show products matching tag Hot Trend">{{ tag.title }}</a>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</div>

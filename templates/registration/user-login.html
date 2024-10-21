@@ -37,6 +37,14 @@
                     <div class="container">
                         <h1 class="text-center title-page">Log In</h1>
                         <div class="login-form">
+                            {% for message in messages %}
+                                <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+                                    {{ message }}
+                                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                            {% endfor %}
                             <form id="customer-form" action="{% url 'users:login' %}" method="post">
                                 {% csrf_token %}
                                 <div>
@@ -47,12 +55,12 @@
                                     <div class="form-group no-gutters">
                                         <div class="input-group js-parent-focus">
                                             <input class="form-control js-child-focus js-visible-password"
-                                                   name="password" type="password" value="" placeholder="Password">
+                                                   name="password1" type="password" value="" placeholder="Password">
                                         </div>
                                     </div>
                                     <div class="no-gutters text-center">
                                         <div class="forgot-password">
-                                            <a href="#" rel="nofollow">
+                                            <a href="{% url 'accounts:reset-password' %}" rel="nofollow">
                                                 Forgot your password?
                                             </a>
                                         </div>
@@ -62,7 +70,7 @@
                                     <div class="text-center no-gutters">
                                         <input type="hidden" name="submitLogin" value="1">
                                         <button class="btn btn-primary" data-link-action="sign-in" type="submit">
-                                            <a href="{% url 'home:home' %}">Sign in</a>
+                                            {% trans 'Sign in' %}
                                         </button>
                                     </div>
                                 </div>
